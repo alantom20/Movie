@@ -35,6 +35,7 @@ class MovieAdapter(var movies : List<Movie>?) : RecyclerView.Adapter<MovieAdapte
             }
             holder.itemView.setOnClickListener {
                 val intent = Intent(it.context,OverviewActivity::class.java)
+                intent.putExtra("backdrop",movie?.backdrop_path)
                 intent.putExtra("poster",movie?.poster_path)
                 intent.putExtra("info",movie?.overview)
                 intent.putExtra("id",movie?.id)

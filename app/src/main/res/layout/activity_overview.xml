@@ -19,24 +19,26 @@
 
     <ImageView
         android:id="@+id/movie_poster_overview"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar_info"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@tools:sample/avatars"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"/>
 
     <TextView
         android:id="@+id/movie_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="#090505"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/movie_poster_overview" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <ImageView
         android:id="@+id/video"
@@ -52,12 +54,26 @@
 
     <ImageView
         android:id="@+id/actor"
-        android:layout_width="85dp"
-        android:layout_height="80dp"
+        android:layout_width="80dp"
+        android:layout_height="85dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/video"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/video"
-        app:srcCompat="@drawable/actor" />
+        app:srcCompat="@drawable/actor"
+        />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="劇情大綱"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#100606"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/movie_poster_overview" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

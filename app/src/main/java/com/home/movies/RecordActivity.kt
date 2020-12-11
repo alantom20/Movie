@@ -42,7 +42,7 @@ class RecordActivity : AppCompatActivity() {
             list = mutableListOf()
 
             record?.forEach {
-                val movie = Movie(it.poster, it.id, it.title, it.vote, it.info, it.date)
+                val movie = Movie(it.poster,it.id,it.backdrop ,it.title, it.vote, it.info, it.date)
                 list.add(movie)
                 Log.d(TAG, "onCreate:${it.id} ")
             }

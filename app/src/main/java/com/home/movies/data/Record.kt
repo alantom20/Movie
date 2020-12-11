@@ -7,6 +7,7 @@ import org.jetbrains.annotations.NotNull
 
 @Entity
 class Record(var poster : String,
+             var backdrop : String,
              @NotNull
              var title : String,
              var date : String,

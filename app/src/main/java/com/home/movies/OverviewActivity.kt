@@ -20,6 +20,7 @@ import java.net.URL
 
 class OverviewActivity : AppCompatActivity() {
 
+    private lateinit var backdrop: String
     private  var  record: Record? = null
     private  var records: List<Record>? =  null
     private lateinit var date: String
@@ -42,6 +43,7 @@ class OverviewActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
 
+        backdrop = intent.getStringExtra("backdrop")
         poster = intent.getStringExtra("poster")
         info = intent.getStringExtra("info")
         id = intent.getIntExtra("id",0)
@@ -78,7 +80,8 @@ class OverviewActivity : AppCompatActivity() {
             startActivity(actor)
         }
 
-        movie_poster_overview.load("https://image.tmdb.org/t/p/w500$poster")
+        movie_poster_overview.load("https://image.tmdb.org/t/p/w500$backdrop")
+
         if(info.equals("")){
             movie_info.setText("新增中")
         }else{
@@ -114,7 +117,7 @@ class OverviewActivity : AppCompatActivity() {
                 // Log.d(TAG, "onOptionsItemSelected:${star} ")
                 if (star){
                     item.setIcon(R.drawable.star)
-                    val record = Record(poster,title,date,vote,star,info,id)
+                    val record = Record(poster,backdrop,title,date,vote,star,info,id)
                     CoroutineScope(Dispatchers.IO).launch {
                         MovieDatabase.getInstance(this@OverviewActivity)?.recordDao()?.insert(record)
 
