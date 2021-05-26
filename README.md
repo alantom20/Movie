@@ -1,8 +1,9 @@
 
 # Movie
-可查看目前熱門電影相關資訊
+可查看目前熱門電影相關資訊  
 提供我的最愛功能
 
- ![unnamed1](https://user-images.githubusercontent.com/44021177/119642451-52739d80-be4d-11eb-9ad8-ea60b422919f.png)  ![unnamed2](https://user-images.githubusercontent.com/44021177/119642453-52739d80-be4d-11eb-8a71-a15f84fcd5de.png)
+
+ ![123](https://user-images.githubusercontent.com/44021177/119642934-d037a900-be4d-11eb-834c-820327fcac51.jpg)  ![unnamed1](https://user-images.githubusercontent.com/44021177/119642451-52739d80-be4d-11eb-9ad8-ea60b422919f.png)  ![unnamed2](https://user-images.githubusercontent.com/44021177/119642453-52739d80-be4d-11eb-8a71-a15f84fcd5de.png)
 
 
